@@ -1,0 +1,306 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Georgia', serif;
+}
+
+body {
+  
+  color: #3e3e3e;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 50px;
+  background-color: #ece3f0;
+  border-bottom: 1px solid #d6cbe2;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.moon-logo {
+  width: 40px;
+  height: 40px;
+  background-image: url(moon.jpg);
+  animation: moonGlow 4s ease-in-out infinite alternate;
+  background-size: cover;
+}
+
+@keyframes moonGlow {
+  from {
+    box-shadow: 0 0 10px rgba(110, 78, 140, 0.2);
+  }
+  to {
+    box-shadow: 0 0 25px rgba(110, 78, 140, 0.5);
+  }
+}
+
+.brand-name {
+  font-family: 'Great Vibes', cursive;
+  font-size: 28px;
+  color: #4c3b64;
+}
+
+nav a {
+  margin: 0 15px;
+  text-decoration: none;
+  color: #4c3b64;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+#hero {
+  text-align: center;
+  padding: 60px 30px;
+  background:linear-gradient(to left,  #d7c7f4, #a58fcf,#2e1a47);
+}
+
+#hero h1 {
+  font-size: 36px;
+  margin-bottom: 10px;
+  color: white;
+    animation: fadeIn 2s ease-in;
+}
+
+#hero p {
+  font-size: 20px;
+  color: white;
+}
+
+.circle-layout {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 40px;
+  padding: 50px;
+  animation: fadeIn 2s ease-in;
+}
+
+.perfume {
+  width: 220px;
+  text-align: center;
+  padding: 20px;
+  border-radius: 20px;
+  background-color: #ffffff;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  transition: transform 0.4s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.perfume:hover {
+  transform: translateY(-8px);
+}
+
+.perfume img {
+  width: 100%;
+  border-radius: 12px;
+  margin-bottom: 15px;
+}
+
+.perfume h3 {
+  color: black;
+  font-size: 20px;
+  margin-bottom: 8px;
+}
+
+.perfume p {
+  font-size: 14px;
+  color: black;
+}
+
+.perfume[data-type="rose"]::after {
+  content: '';
+  position: absolute;
+  top: -50px;
+  left: -50px;
+  width: 200%;
+  height: 200%;
+  background: url('rose.jpg') no-repeat center center;
+  background-size: cover;
+  opacity: 0.5;
+  animation: petals 12s linear infinite;
+  pointer-events: none;
+}
+
+.perfume[data-type="sandalwood"]::after {
+  content: '';
+  position: absolute;
+  top: -50px;
+  left: -50px;
+  width: 200%;
+  height: 200%;
+  background: url('sandalwood.jpg') no-repeat center center;
+  background-size: cover;
+  opacity: 0.5;
+  animation: petals 12s linear infinite;
+  pointer-events: none;
+}
+
+.perfume[data-type="lavender"]::after {
+  content: '';
+  position: absolute;
+  top: -50px;
+  left: -50px;
+  width: 200%;
+  height: 200%;
+  background: url('lavender.jpg') no-repeat center center;
+  background-size: cover;
+  opacity: 0.5;
+  animation: petals 12s linear infinite;
+  pointer-events: none;
+}
+
+
+
+.perfume[data-type="vanilla"]::after {
+  content: '';
+  position: absolute;
+  top: -50px;
+  left: -50px;
+  width: 200%;
+  height: 200%;
+  background: url('vanilla.jpg') no-repeat center center;
+  background-size: cover;
+  opacity: 0.5;
+  animation: petals 12s linear infinite;
+  pointer-events: none;
+}
+
+
+
+
+
+@keyframes petals {
+  from {
+    transform: translateY(-10px) rotate(0deg);
+  }
+  to {
+    transform: translateY(10px) rotate(360deg);
+  }
+}
+
+section {
+  padding: 60px 40px;
+  text-align: center;
+}
+
+section h2 {
+  color: #4b3567;
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+
+section p {
+  font-size: 16px;
+  color: #6f5b81;
+  max-width: 700px;
+  margin: auto;
+}
+
+.border-frame {
+  position: relative;
+  min-height: 100vh;
+  padding: 60px;
+  background-color: #fff;
+}
+
+.border-frame::before,
+.border-frame::after,
+.border-frame .bottom-border {
+  content: "";
+  position: absolute;
+  background-image: url('vine.jpeg');
+  background-repeat: repeat;
+  opacity: 0.9;
+  z-index: 0;
+}
+
+.border-frame::before {
+  top: 0;
+  left: 0;
+  width: 90px;
+  height: 100%;
+  background-position: top left;
+  background-size: auto 200px; 
+}
+
+.border-frame::after {
+  top: 0;
+  right: 0;
+  width: 90px;
+  height: 100%;
+  background-position: top right;
+  background-size: auto 200px;
+}
+
+.border-frame .bottom-border {
+  left: 0;
+  bottom: 0;
+  width: 90px;
+  height: 100px;
+  background-position: bottom;
+  background-size: 200px auto;
+}
+
+
+
+footer {
+   background:linear-gradient(to right,  #d7c7f4, #a58fcf,#2e1a47);
+  padding: 30px;
+  text-align: center;
+}
+
+.social-icons {
+  margin-bottom: 10px;
+}
+
+.social-icons a {
+  margin: 0 10px;
+  font-size: 20px;
+  color:#50376d ;
+  transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+  color: black;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
